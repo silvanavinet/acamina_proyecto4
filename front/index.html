@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Data Warehouse</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img src="/logo.svg" class="logo-container" alt="">
+            
+            <!-- <input type="checkbox" id="chk-nav-bar"> -->
+        </nav>
+    </header>
+        <form class="form" id="form-login">
+            <h2>Bienvenidos</h2>
+            <p type="Nombre:">
+                <input 
+                    placeholder="Escribe tu email aquí." 
+                    id="form-login-email"></input>
+            </p>
+            <p type="Contraseña:">
+                <input 
+                    placeholder="Escribe tu contraseña aquí."
+                    type="password" 
+                    id="form-login-contrasena"></input>
+            </p>          
+            <button id="form-button-ingresar"  >Ingresar</button>
+            <div>
+            </div>
+        </form>  
+    
+        <script src="./js/services/auth.js"></script>
+        <script src="./js/login.js"></script>
+</body>
+</html>

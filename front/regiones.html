@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regiones.css">
+    <link rel="stylesheet" href="tree.css">
+    <title>Data Warehouse</title>
+</head>
+
+<body>
+    
+    <nav class="nav-bar">
+        <img src="/logo.svg" class="logo-container" alt="">
+        <ul class="menu-options">
+            <li><a class="menu-options-links" href="/contactos.html" id="show-modal" style="text-decoration:none;color:#78788c">Contactos</a></li>
+            <li id="menu-usuarios"><a class="menu-options-links" href="/usuarios.html" style="text-decoration:none;color:#78788c">Usuarios</a></li>
+            <li><a class="menu-options-links" href="/companias.html" style="text-decoration:none;color:#78788c">Compañías</a></li>
+            <li><a class="menu-options-links" href="/regiones.html" style="text-decoration:none;color:#78788c">Región / Ciudad</a></li>  
+        </ul>
+      </nav>
+
+
+    <button id="agregarregion">Agregar región</button>
+
+
+    <!-- FORMS -->
+    <br>
+    <!-- Agregar Region -->
+    <form class="form-region-pais" id="form-region-agregar">
+        <br>
+        <h2>Agregar región</h2>
+        <p type="Nombre:">
+            <input id="valor-crear-region" placeholder="Escribe el nombre de la región."></input>
+        </p>
+        <button id="agregarregion1.1">Cancelar</button>
+        <button id="agregarregion1">Crear</button>
+
+    </form>
+    <!-- Agregar Pais -->
+    <form class="form-region-pais" id="form-pais-agregar">
+        <h2>Agregar pais</h2>
+        <p type="Region:">
+            <input placeholder="Sudamérica" readonly id="add-pais-region-name">
+            </input>
+        </p>
+        <p type="Nombre:">
+            <input id="valor-crear-pais" placeholder="Escribe el nombre de el pais."></input></p>
+        <button id="agregarpais1.1">Cancelar</button>
+        <button id="agregarpais">Crear</button>
+    </form>
+    <!-- Editar Pais -->
+    <form class="form-region-pais" id="form-pais-editar">
+        <h2>Editar Pais</h2>
+        <p type="Region:">
+            <input placeholder="Sudamérica" readonly></input>
+        </p>
+        <p type="Nombre:">
+            <input id="valor-editar-pais" placeholder="Escribe el nombre de el pais."></input>
+        </p>
+        <button id="editarpais1.1">Cancelar</button>
+        <button id="editarpais">Guardar</button>
+    </form>
+    <!-- Agregar Ciudad -->
+    <form class="form-region-pais" id="form-ciudad-agregar">
+        <h2>Agregar ciudad</h2>
+        <p type="Pais:">
+            <input placeholder="Chile" readonly id="add-ciudad-region-name"></input>
+        </p>
+        <p type="Nombre:">
+            <input id="valor-crear-ciudad" placeholder="Escribe el nombre de la ciudad."></input>
+        </p>
+        <button id="agregarciudad1.1">Cancelar</button>
+        <button id="agregarciudad">Crear</button>
+    </form>
+    <!-- Editar Ciudad -->
+    <form class="form-region-pais" id="form-ciudad-editar">
+        <h2>Editar Ciudad</h2>
+        <p type="Pais:">
+            <input placeholder="Chile" readonly></input>
+        </p>
+        <p type="Nombre:">
+            <input placeholder="Escribe el nombre de la ciudad."></input>
+        </p>
+        <button id="editarciudad1.1">Cancelar</button>
+        <button id="editarciudad">Guardar</button>
+    </form>
+    <br>
+    <!-- FORMS -->
+
+    <!-- REGIONES TREE -->
+    <ul id="myUL">
+        <li class="region-li">
+            <div class="caret tree-title-li">
+                Sudamérica
+                <button id="agregarpais" class="agregarpais">Agregar pais</button>
+            </div>
+
+            <ul class="nested">
+                <li>
+                    <div class="caret tree-title-li ">
+                        <h4>Argentina</h4>
+
+                    </div>
+                    <div class="ctrl-panel-child">
+                        <div class="ctrl-panel-child-cmpt-left">
+                            <button id="editar">Editar</button>
+                            <button id="borrar">Borrar</button>
+                        </div>
+                        <div class="ctrl-panel-child-cmpt-left">
+                            <button id="ciudad">Agregar ciudad</button>
+                        </div>
+                    </div>
+                    <ul class="nested">
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Buenos Aires </h4>
+                            <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                        </li>
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Mendoza </h4>
+                            <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                        </li>
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Cordoba </h4>
+                            <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="caret tree-title-li ">
+                        <h4>Chile</h4>
+                    </div>
+                    <div class="ctrl-panel-child">
+                        <div class="ctrl-panel-child-cmpt-left">
+                            <button id="editar">Editar</button>
+                            <button id="borrar">Borrar</button>
+                        </div>
+                        <div class="ctrl-panel-child-cmpt-left">
+                            <button id="ciudad">Agregar ciudad</button>
+                        </div>
+                    </div>
+                    <ul class="nested">
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Santiago </h4>
+                            <button id="editar">Editar</button>
+                            <button id="borrar">Borrar</button>
+                        </li>
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Valparaiso </h4>
+                            <button id="editar">Editar</button>
+                            <button id="borrar">Borrar</button>
+                        </li>
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Concepción </h4>
+                            <button id="editar">Editar</button>
+                            <button id="borrar">Borrar</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="region-li">
+            <div class="caret tree-title-li">Norteamérica
+                <button id="agregarpais" class="agregarpais">Agregar pais</button></div>
+
+            <ul class="nested">
+                <li>
+                    <div class="caret tree-title-li ">
+                        <h4>Estados Unidos</h4>
+                        <div class="ctrl-panel-child">
+                            <div class="ctrl-panel-child-cmpt-left">
+                                <button id="editar">Editar</button>
+                                <button id="borrar">Borrar</button>
+                            </div>
+                            <div class="ctrl-panel-child-cmpt-left">
+                                <button id="ciudad">Agregar ciudad</button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nested">
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Miami </h4>
+                            <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                        </li>
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Nueva York </h4>
+                            <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                        </li>
+                        <li class="ctrl-panel-child tree-leaf">
+                            <h4>Boston </h4>
+                            <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="caret tree-title-li ">
+                        <h4>México</h4>
+                        <div class="ctrl-panel-child">
+                            <div class="ctrl-panel-child-cmpt-left">
+                                <button id="editar">Editar</button>
+                                <button id="borrar">Borrar</button>
+                            </div>
+                            <div class="ctrl-panel-child-cmpt-left">
+                                <button id="ciudad">Agregar ciudad</button>
+                            </div>
+                        </div>
+                        <ul class="nested">
+                            <li class="ctrl-panel-child tree-leaf">
+                                <h4>Cancun </h4>
+                                <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                            </li>
+                            <li class="ctrl-panel-child tree-leaf">
+                                <h4>CDMX </h4>
+                                <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                            </li>
+                            <li class="ctrl-panel-child tree-leaf">
+                                <h4>Monterrey </h4>
+                                <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <div class="caret tree-title-li ">
+                        <h4>Canada</h4>
+                        <div class="ctrl-panel-child">
+                            <div class="ctrl-panel-child-cmpt-left">
+                                <button id="editar">Editar</button>
+                                <button id="borrar">Borrar</button>
+                            </div>
+                            <div class="ctrl-panel-child-cmpt-left">
+                                <button id="ciudad">Agregar ciudad</button>
+                            </div>
+                        </div>
+                        <ul class="nested">
+                            <li class="ctrl-panel-child tree-leaf">
+                                <h4>Toronto </h4>
+                                <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                            </li>
+                            <li class="ctrl-panel-child tree-leaf">
+                                <h4>Ottawa </h4>
+                                <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                            </li>
+                            <li class="ctrl-panel-child tree-leaf">
+                                <h4>Quebec </h4>
+                                <button id="editar">Editar</button><button id="borrar">Borrar</button>
+                            </li>
+                        </ul>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+    <!-- REGIONES TREE -->
+
+    <script>
+        const isAdmin = localStorage.getItem("is_admin")
+
+        if (isAdmin == "false") {
+            document.getElementById("menu-usuarios").style.display = "none"
+        }
+    </script>
+
+
+    <script src="./js/tree.js"></script>
+    <script src="./js/services/api.js"></script>
+    <script src="./js/services/regiones.js"></script>
+    <script src="./js/services/paises.js"></script>
+    <script src="./js/services/ciudades.js"></script>
+    <script src="./js/regiones.js"></script>
+
+
+</body>
+
+</html>

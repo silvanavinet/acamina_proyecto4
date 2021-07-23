@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>DataWarehouse: Compañias</title>
+
+</head>
+
+<body>
+
+  <nav class="nav-bar">
+    <img src="/logo.svg" class="logo-container" alt="">
+    <ul class="menu-options">
+        <li><a class="menu-options-links" href="/contactos.html" id="show-modal" style="text-decoration:none;color:#78788c">Contactos</a></li>
+        <li id="menu-usuarios"><a class="menu-options-links" href="/usuarios.html" style="text-decoration:none;color:#78788c">Usuarios</a></li>
+        <li><a class="menu-options-links" href="/companias.html" style="text-decoration:none;color:#78788c">Compañías</a></li>
+        <li><a class="menu-options-links" href="/regiones.html" style="text-decoration:none;color:#78788c">Región / Ciudad</a></li>  
+    </ul>
+  </nav>
+
+  <!-- FORMS -->
+  <form class="form-companias" id="form-companias-create">
+    <h2>Crear Compañia</h2>
+    <p type="Nombre:">
+      <input id="finput-compcreate-name" placeholder="Nombre"></input>
+    </p>
+    <!-- <p type="Pais:"><input id="finput-compcreate-country" placeholder="Pais"></input></p> -->
+    <p type="Pais:"></p>
+    <select name="cars" id="finput-compcreate-country">
+      <!-- <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option> -->
+    </select>
+    <p type="Ciudad:"></p>
+    <select name="cars" id="finput-compcreate-city">
+      <!-- <option value="volvo" >Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option> -->
+    </select>
+    <p type="Dirección:"><input id="finput-compcreate-dir" placeholder="Dirección"></input></p>
+    <p type="Email:"><input id="finput-compcreate-email" placeholder="Email"></input></p>
+    <p type="Telefono:"><input id="finput-compcreate-tel" placeholder="Telefono"></input></p>
+    <button id="frm-compagregar-create">Guardar</button>
+    <button id="frm-compagregar-cancelar">Cancelar</button>
+  </form>
+
+  <form class="form-editar" id="form-companias-edit">
+    <h2>Editar Compañia</h2>
+    <p type="Nombre:"><input id="finput-compedit-name" placeholder="Escribe el nombre de la compañia." readonly></input></p>
+    <p type="Pais:"><input id="finput-compedit-country" placeholder="Edita el pais de la compañia." readonly></input></p>
+    <p type="Ciudad:"><input id="finput-compedit-city" placeholder="Edita la ciudad de la compañia." readonly></input></p>
+    <p type="Dirección:"><input id="finput-compedit-dir" placeholder="Edita la dirección de la compañia."></input></p>
+    <p type="Email:"><input id="finput-compedit-email" placeholder="Edita tu email aquí." type="email"></input></p>
+    <p type="Telefono:"><input id="finput-compedit-tel" placeholder="Edita el teléfono de la compañia."></input></p>
+    <button id="frm-compedit-guardar">Guardar</button>
+    <button id="frm-compedit-cancelar">Cancelar</button>
+  </form>
+
+  <h2>COMPAÑIAS</h2>
+  <button id="btn-show-agregar-companias" class="crear-contactos">Nueva Compañia</button>
+
+  <table id="table-companias">
+    <tr>
+      <th>Nombre</th>
+      <th>Pais</th>
+      <th>Dirección</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+      <th>Ciudad</th>
+    </tr>
+    <tr>
+      <td>Yumeko</td>
+      <td>Chile</td>
+      <td>Camino </td>
+      <td>Yumeko@gmail.com</td>
+      <td>98765432</td>
+      <td>Concepcion</td>
+      <td>
+        <button class="tabla">Editar</button>
+        <button class="tabla">Eliminar</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Silvana</td>
+      <td>Chile</td>
+      <td>camino2</td>
+      <td>Silvi@gmail.com</td>
+      <td>1234567</td>
+      <td>viña</td>
+      <td>
+        <button class="tabla">Editar</button>
+        <button class="tabla">Eliminar</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Joaquin</td>
+      <td>Argentina</td>
+      <td>camino3</td>
+      <td>joaquin@gmail.com</td>
+      <td>4567</td>
+      <td>santiago</td>
+      <td>
+        <button class="tabla">Editar</button>
+        <button class="tabla">Eliminar</button>
+      </td>
+    </tr>
+  </table>
+  
+
+  <script >
+    const isAdmin = localStorage.getItem( "is_admin")
+    
+    if(isAdmin == "false"){
+      document.getElementById("menu-usuarios").style.display = "none"
+    }
+    
+  </script>
+
+  <script src="./js/services/api.js" ></script>
+  <script src="./js/services/paises.js"></script>
+  <script src="./js/services/ciudades.js"></script>
+  <script src="./js/services/companias.js" ></script>
+  <script src="./js/companias.js"></script>
+
+  
+
+</body>
+
+</html>

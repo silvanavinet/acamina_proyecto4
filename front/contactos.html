@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+
+
+</head>
+
+<body>
+
+  <nav class="nav-bar">
+    <img src="/logo.svg" class="logo-container" alt="">
+    <ul class="menu-options">
+      <li><a class="menu-options-links" href="/contactos.html" id="show-modal"
+          style="text-decoration:none;color:#78788c">Contactos</a></li>
+      <li id="menu-usuarios"><a class="menu-options-links" href="/usuarios.html"
+          style="text-decoration:none;color:#78788c">Usuarios</a></li>
+      <li><a class="menu-options-links" href="/companias.html" style="text-decoration:none;color:#78788c">Compañías</a>
+      </li>
+      <li><a class="menu-options-links" href="/regiones.html" style="text-decoration:none;color:#78788c">Región /
+          Ciudad</a></li>
+    </ul>
+  </nav>
+
+  <h2>Contactos</h2>
+  <button id="btn-contacto-create-mostrar" class="crear-contactos">Agregar</button>
+
+  <form class="form-contactos" id="form-contactos-create">
+    <h2>Crear Contactos</h2>
+    <p type="Nombre:"><input id="frm-concrear-fname" placeholder="Escribe el nombre de contacto."></input></p>
+    <p type="Apellido:"><input id="frm-concrear-lname" placeholder="Escribe el apellido del contacto."></input></p>
+    <p type="Cargo:"><input id="frm-concrear-rol" placeholder="Escribe el cargo del contacto."></input></p>
+    <p type="Email:"><input id="frm-concrear-email" placeholder="Escribe el email de la compañia."></input></p>
+
+    <label for="cars">Compania</label>
+    <select id="frm-concrear-compania" name="region">
+      <!-- <option value="chile">Norteamérica</option>
+      <option value="argentina">Sudamérica</option>
+      <option value="colombia">Europa</option>
+      <option value="brasil">Asia</option> -->
+    </select>
+    <br>
+    
+    <label for="cars">Region</label>
+    <select id="frm-concrear-regions" name="region">
+      <!-- <option value="chile">Norteamérica</option>
+      <option value="argentina">Sudamérica</option>
+      <option value="colombia">Europa</option>
+      <option value="brasil">Asia</option> -->
+    </select>
+    <br>
+    
+    <label for="cars">Pais</label>
+    <select id="frm-concrear-pais" name="pais">
+      <!-- <option value="chile">Chile</option>
+      <option value="argentina">Argentina</option>
+      <option value="colombia">Colombia</option>
+      <option value="brasil">Brasil</option> -->
+    </select>
+    <br>
+    
+    <label for="cars">Ciudad</label>
+    <select id="frm-concrear-ciudad" name="cars">
+      <!-- <option value="chile">Santigo</option>
+      <option value="argentina">Buenos aires</option>
+      <option value="colombia">Bogota</option>
+      <option value="brasil">Brasilia</option> -->
+    </select>
+    
+    <p type="Dirección:"><input id="frm-concrear-dir"  placeholder="Escribe la dirección del contacto."></input></p>
+    
+    <label for="cars">Intereses</label>
+    <select id="frm-concrear-interest" name="cars">
+      <option value="0">0%</option>
+      <option value="25">25%</option>
+      <option value="50">50%</option>
+      <option value="75">75%</option>
+      <option value="100">100%</option>
+    </select>
+    <hr>
+    
+    <ul id="frm-lista-canales">
+      <li id="canal-1">
+        <label for="cars">Canal</label>
+        <select id="frm-concrear-preference" name="canal">
+          <option value="chile">Facebook</option>
+          <option value="argentina">Instagram</option>
+          <option value="colombia">Whatsapp</option>
+          <option value="brasil">Linkedin</option>
+        </select>
+        <br>
+        <label for="cars">Preferencia</label>
+        <select id="frm-concrear-preference" name="prefer">
+          <option value="sin-preferencia">Sin preferencia</option>
+          <option value="baja">Baja</option>
+          <option value="media">Media</option>
+          <option value="alta">Alta</option>
+        </select>
+        <p type="Cuenta de usuario:"><input placeholder="Escribe la cuenta de usuario del contacto."></input></p>
+        <button id="btn-canal-create">Eliminar</button>
+      </li>
+    </ul>
+
+    <button style="display: block;" id="btn-agregar-canal">Agregar Canal</button>
+    <button id="btn-contacto-create">Crear</button>
+    <button id="btn-contacto-create-cancelar">Cancelar</button>
+
+  </form>
+
+  <form class="form-editar" id="form-contactos-edit">
+    <h2>Editar Compañia</h2>
+    <p type="Nombre:"><input placeholder="Escribe el nombre de la compañia." readonly></input></p>
+    <p type="Pais:"><input placeholder="Edita el pais de la compañia." readonly></input></p>
+    <p type="Dirección:"><input placeholder="Edita la dirección de la compañia."></input></p>
+    <p type="Ciudad:"><input placeholder="Edita la ciudad de la compañia."></input></p>
+    <p type="Email:"><input placeholder="Edita tu email aquí."></input></p>
+    <p type="Telefono:"><input placeholder="Edita el teléfono de la compañia."></input></p>
+    <button>Crear</button>
+  </form>
+
+  <table id="contactos-table">
+    <tr>
+      <th>Nombre</th>
+      <th>Pais/region</th>
+      <th>Compañia</th>
+      <th>Cargo</th>
+      <th>Canal preferido</th>
+      <th>Intereses</th>
+    </tr>
+    <tr>
+      <td>Yumeko</td>
+      <td>Chile</td>
+      <td>Mimir </td>
+      <td>Jefa</td>
+      <td>Facebook</td>
+      <td>100%</td>
+      <td>
+        <button class="tabla">Editar</button>
+        <button class="tabla">Eliminar</button>
+      </td>
+
+    </tr>
+    <tr>
+      <td>Silvana</td>
+      <td>Chile</td>
+      <td>mimir2</td>
+      <td>mimidora</td>
+      <td>insta</td>
+      <td>50%</td>
+      <td>
+        <button class="tabla">Editar</button>
+        <button class="tabla">Eliminar</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Joaquin</td>
+      <td>Argentina</td>
+      <td>enojon</td>
+      <td>gato</td>
+      <td>nose</td>
+      <td>10%</td>
+      <td>
+        <button class="tabla">Editar</button>
+        <button class="tabla">Eliminar</button>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    const isAdmin = localStorage.getItem("is_admin")
+
+    if (isAdmin == "false") {
+      document.getElementById("menu-usuarios").style.display = "none"
+    }
+  </script>
+
+  <script src="./js/services/api.js" ></script>
+  <script src="./js/services/regiones.js" ></script>
+  <script src="./js/services/paises.js" ></script>
+  <script src="./js/services/ciudades.js" ></script>
+  <script src="./js/services/companias.js" ></script>
+  <script src="./js/services/contactos.js" ></script>
+  <script src="./js/contactos.js" ></script>
+</body>
+
+</html>

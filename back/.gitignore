@@ -1,0 +1,6 @@
+node_modules
+.fake
+.ionide
+delilah_exports
+.env
+

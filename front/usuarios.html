@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Data Warehouse</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img src="/logo.svg" class="logo-container" alt="">
+            <ul class="menu-options">
+                <li><a class="menu-options-links" href="/contactos.html" id="show-modal"
+                        style="text-decoration:none;color:#78788c">Contactos</a></li>
+                <li><a class="menu-options-links" href="/usuarios.html"
+                        style="text-decoration:none;color:#78788c">Usuarios</a></li>
+                <li><a class="menu-options-links" href="/companias.html"
+                        style="text-decoration:none;color:#78788c">Compañías</a></li>
+                <li><a class="menu-options-links" href="/regiones.html"
+                        style="text-decoration:none;color:#78788c">Región / Ciudad</a></li>
+            </ul>
+
+
+            <!-- <input type="checkbox" id="chk-nav-bar"> -->
+        </nav>
+    </header>
+    <form class="form-usuarios">
+        <h2>Crear Usuario</h2>
+        <p type="Nombre:"><input placeholder="Escribe tu nombre aquí."></input></p>
+        <p type="Apellido:"><input placeholder="Escribe tu apellido aquí."></input></p>
+        <p type="Email:"><input placeholder="Escribe tu email aquí."></input></p>
+        <p type="Perfil:"><input placeholder="Escribe tu perfil aquí."></input></p>
+        <p type="Contraseña:"><input placeholder="Escribe tu contraseña aquí."></input></p>
+        <p type="Repetir contraseña:"><input placeholder="Repite tu contraseña aquí aquí."></input></p>
+        <button>Crear</button>
+    </form>
+
+    <h2>USUARIOS</h2>
+    <button class="crear-usuarios">Crear</button>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Perfil</th>
+            <th>Admi</th>
+            <th>Básico</th>
+            <th>Acciones</th>
+        </tr>
+        <tr>
+            <td>Yumeko</td>
+            <td>señoramisifus</td>
+            <td>yumeko@gmail.com</td>
+            <td>Yumeko</td>
+            <td>Si</td>
+            <td>No</td>
+            <td>
+                <button class="tabla">Editar</button>
+                <button class="tabla">Eliminar</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Silvana</td>
+            <td>Vinet</td>
+            <td>Silvi@gmail.com</td>
+            <td>silvi</td>
+            <td>No</td>
+            <td>Si</td>
+            <td>
+                <button class="tabla">Editar</button>
+                <button class="tabla">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Joaquin</td>
+            <td>Cardenas</td>
+            <td>joaquin@gmail.com</td>
+            <td>Cakin</td>
+            <td>No</td>
+            <td>Si</td>
+            <td>
+                <button class="tabla">Editar</button>
+                <button class="tabla">Eliminar</button>
+            </td>
+        </tr>
+    </table>
+    <form class="form-editar">
+        <h2>Editar Usuario</h2>
+        <p type="Nombre:"><input placeholder="Cambia tu nombre aquí."></input></p>
+        <p type="Apellido:"><input placeholder="Cambia tu apellido aquí."></input></p>
+        <p type="Email:"><input placeholder="Cambia tu email aquí."></input></p>
+        <p type="Perfil:"><input placeholder="Escribe tu perfil aquí."></input></p>
+        <p type="Nueva contraseña:"><input placeholder="Cambia tu contraseña aquí."></input></p>
+        <p type="Repetir nueva contraseña:"><input placeholder="Repite tu nueva contraseña aquí aquí."></input></p>
+        <button>Guardar cambios</button>
+    </form>
+
+</body>
+
+
+<script >
+    const isAdmin = localStorage.getItem( "is_admin")
+    
+    if(isAdmin == "false"){
+      document.getElementById("menu-usuarios").style.display = "none"
+    }
+  </script>
+
+</html>
